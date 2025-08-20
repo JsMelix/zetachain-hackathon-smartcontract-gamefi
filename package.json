@@ -1,0 +1,42 @@
+{
+  "name": "zetachain-smart-contract-game-ui",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "dev:ai": "node --env-file=.env --loader ts-node/esm server/index.ts",
+    "compile": "hardhat compile",
+    "deploy:testnet": "hardhat run scripts/deploy.ts --network zetaTestnet",
+    "deploy:mainnet": "hardhat run scripts/deploy.ts --network zetaMainnet",
+    "deploy:local": "hardhat run scripts/deploy.ts --network hardhat",
+    "test": "hardhat test",
+    "node": "hardhat node",
+    "clean": "hardhat clean",
+    "interact:info": "hardhat run scripts/interact.ts -- info",
+    "interact:play": "hardhat run scripts/interact.ts -- play"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "ethers": "^6.13.1",
+    "@google/generative-ai": "^0.21.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@openzeppelin/contracts": "^5.0.0",
+    "@types/node": "^22.14.0",
+    "dotenv": "^16.3.1",
+    "hardhat": "^2.19.0",
+    "@types/express": "^4.17.21",
+    "@types/cors": "^2.8.17",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}
